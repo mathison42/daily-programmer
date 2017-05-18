@@ -10,42 +10,46 @@ File input = new File("input.txt");
 def array = input.getText().split('\n')*.trim()
 
 // Shorten Initial Array
-def finalArray = []
-for (int i = array.size()-1; i>=0; i--) {
-    boolean found = false
-    int jStart
-    if (finalArray.size() < 25000) {
-        jStart = 0
-    } else if (finalArray.size() < 50000) {
-        jStart = 20000
-    } else if (finalArray.size() < 70000) {
-        jStart = 45000
-    } else if (finalArray.size() < 80000) {
-        jStart = 65000
-    } else if (finalArray.size() < 90000) {
-        jStart = 75000
-    } else {
-        jStart = 85000
-    }
-    for (int j = jStart; j<finalArray.size(); j++) {
-        if (finalArray[j].contains(array[i])) {
-            found = true
-            break
-        }
-    }
-    if (!found) {
-        finalArray << array[i]
-    }
-}
-
-println "New Size: " + finalArray.size()
+// But it actually increases the total count and the total runtime
+// def finalArray = []
+// for (int i = array.size()-1; i>=0; i--) {
+//     boolean found = false
+//     int jStart
+//     if (finalArray.size() < 25000) {
+//         jStart = 0
+//     } else if (finalArray.size() < 50000) {
+//         jStart = 20000
+//     } else if (finalArray.size() < 70000) {
+//         jStart = 45000
+//     } else if (finalArray.size() < 80000) {
+//         jStart = 65000
+//     } else if (finalArray.size() < 90000) {
+//         jStart = 75000
+//     } else {
+//         jStart = 85000
+//     }
+//     for (int j = jStart; j<finalArray.size(); j++) {
+//         if (finalArray[j].contains(array[i])) {
+//             found = true
+//             break
+//         }
+//     }
+//     if (!found) {
+//         finalArray << array[i]
+//     }
+// }
+//
+// println "New Size: " + finalArray.size()
 println "Original Size: " + array.size()
 
-String result = "lly" // Starting the string with `lly` lowers the total count by 14
+String result = "lly"
+// Starting the string with `lly` lowers the total count by 14
+// Having an empty starting string is 406
+// Having an empty starting string with the preprocessing is 404
 String temp
 String tempResult
 // Iterate through input list
-finalArray.each{ it ->
+array.each{ it ->
     def overallLoc = 0
     // println "result : " + result
     // println "it: " + it
