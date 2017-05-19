@@ -1,6 +1,6 @@
 # Daily Programmer 313-Hard
 
-(Link)[https://www.reddit.com/r/dailyprogrammer/comments/69fxq8/20170505_challenge_313_hard_embedded_word_list/]
+[Link](https://www.reddit.com/r/dailyprogrammer/comments/69fxq8/20170505_challenge_313_hard_embedded_word_list/)
 
 ### My Solution
     File: runner2.groovy

@@ -1,6 +1,6 @@
 # Daily Programmer 314-Hard
 
-(Link)[https://www.reddit.com/r/dailyprogrammer/comments/6arlw4/20170512_chalenge_314_hard_finding_point_nemo/]
+[Link](https://www.reddit.com/r/dailyprogrammer/comments/6arlw4/20170512_chalenge_314_hard_finding_point_nemo/)
 
 ### My Solution
     File: runner.groovy
